@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import Earth from './components/Earth.vue'
+// import Earth from './components/Earth/Earth.vue'
+import Earth from './components/Earth'
 
 export default {
   name: 'App',
