@@ -13,7 +13,7 @@ import {
   MeshLambertMaterial,
   Mesh,
 } from "three";
-import earthTexture from "../../img/earth.png";
+import earthTexture from "../../img/earth.png";//hwx:世界地图图片，作为包括纹理贴图的原图,通过纹理加载器实现
 
 //添加地球贴图的Mesh到场景中
 export const createEarthImageMesh = (radius) => {
@@ -28,6 +28,5 @@ export const createEarthImageMesh = (radius) => {
   var material = new MeshLambertMaterial({
     map: texture, //设置地球0颜色贴图map
   });
-  var mesh = new Mesh(geometry, material); //网格模型对象Mesh
-  return mesh;
+  return new Mesh(geometry, material); //网格模型对象Mesh
 };

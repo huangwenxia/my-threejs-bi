@@ -56,7 +56,7 @@ export const initLight = (scene)=>{
 export const initCamera = (width,height)=>{
     let aspect = width / height;
     let camera = new PerspectiveCamera(45, aspect, 0.1, 1000);
-    camera.position.set(30, 26, 10);
+    camera.position.set(30, 26, 10);//hwx:光源位置
     return camera
 }
 

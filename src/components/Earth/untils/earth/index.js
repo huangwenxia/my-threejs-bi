@@ -22,10 +22,10 @@ export const earth3dObj = (cityList, flyLineData) => {
     let earthMesh = createEarthImageMesh(GlobalConfig.earthRadius);
     // let cloudMesh = createEarthCloudImageMesh(earthRadius + 0.03)
     // object3D.add(cloudMesh);
-    let glow = earthGlow(GlobalConfig.earthRadius,earthGlowPng,3.05);
-    let glowLight = earthGlow(GlobalConfig.earthRadius,earthGlowLightPng,3.15);
-    object3D.add(countryLine(GlobalConfig.earthRadius + 0.01));
-    object3D.add(earthMesh);
+    let glow = earthGlow(GlobalConfig.earthRadius,earthGlowPng,3.05);//hwx:地球辉光1
+    let glowLight = earthGlow(GlobalConfig.earthRadius,earthGlowLightPng,3.15);//hwx:地球辉光2
+    object3D.add(countryLine(GlobalConfig.earthRadius + 0.01));//hwx:国家边界线
+    object3D.add(earthMesh);//hwx:3D球体上可以加很多东西，光辉，缩放，国家边界线
     object3D.add(glow);
     object3D.add(glowLight);
 
@@ -35,8 +35,8 @@ export const earth3dObj = (cityList, flyLineData) => {
         for (let index = 0; index < waveMeshArr.length; index++) {
             const cityWaveMesh = waveMeshArr[index];
             const cityMesh = pointMeshArr[index];
-            object3D.add(cityMesh);
-            object3D.add(cityWaveMesh);
+            object3D.add(cityMesh);//hwx:点代表城市
+            object3D.add(cityWaveMesh);//hwx:涟漪花纹
         }
 
         //添加飞线

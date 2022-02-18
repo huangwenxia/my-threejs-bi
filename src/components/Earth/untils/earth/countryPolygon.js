@@ -13,7 +13,7 @@ import {
   LineSegments
 } from "three";
 //引入国家边界数据
-import pointArr from "./world.js";
+import pointArr from "./world.js";//国家边界数据（//hwx:世界国家（非一国内省会边界）边界数据）
 import { countryLineColor } from "../../config";
 // R:球面半径
 function countryLine(R) {

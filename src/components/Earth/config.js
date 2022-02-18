@@ -10,8 +10,8 @@
 //地球半径
 export var earthRadius = 14
 
-//世界轮廓线段
-export const countryLineColor = 0x7aa5a5
+//世界国家轮廓线段
+export const countryLineColor = 0x7aa5a5;//hwx:世界国家轮廓线颜色，可任意修改:red
 
 export const controlConfig = {
     minZoom: 0.5,

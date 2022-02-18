@@ -40,7 +40,7 @@ export default {
       //飞线管理
       flyManager: null,
       earthConfig:{
-        autoRotate: true,
+        autoRotate: false,
         zoomChina: false,
         starBackground: false,
         orbitControlConfig:{
@@ -102,7 +102,7 @@ export default {
           this.earth3dObj = object3D;
           this.waveMeshArr = waveMeshArr;
           this.flyManager = flyManager;
-          this.scene.add(this.earth3dObj);
+          this.scene.add(this.earth3dObj);//hwx:这里在场景中加入了网格模型（3d地球）
           if (this.earthConfig.autoRotate && this.earthConfig.zoomChina) {
             Utils.rotate.autoRotateEarth(this);
           }
